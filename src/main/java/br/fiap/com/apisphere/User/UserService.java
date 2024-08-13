@@ -1,4 +1,4 @@
-package br.fiap.com.apisphere.User;
+package br.fiap.com.apisphere.user;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,11 +12,11 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public User createUser(User user) { 
+    public User create(User user) { 
         return userRepository.save(user);
     }
 
-    public List<User> listUser() {
+    public List<User> findAll() {
         return userRepository.findAll();
 
     }
